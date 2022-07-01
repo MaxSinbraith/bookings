@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
+	"github.com/MaxSinbraith/bookings/internal/config"
+	"github.com/MaxSinbraith/bookings/internal/handlers"
+	"github.com/MaxSinbraith/bookings/internal/render"
 	"log"
 	"net/http"
 	"time"
 
-	"github.com/MaxSinbraith/bookings/pkg/config"
-	"github.com/MaxSinbraith/bookings/pkg/handlers"
-	"github.com/MaxSinbraith/bookings/pkg/render"
 	"github.com/alexedwards/scs/v2"
 )
 

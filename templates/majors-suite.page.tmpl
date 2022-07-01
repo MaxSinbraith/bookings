@@ -1,0 +1,67 @@
+{{template "base" .}}
+
+{{define "content"}}
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img
+                src="/static/images/marjors-suite.png"
+                class="img-fluid img-thumbnail mx-auto d-block room-image"
+                alt="room image"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h1 class="text-center mt-4">Major's Suite</h1>
+        <p>
+          Your home away from home, set on the vast waters of the Pacific
+          Ocean. Relax, adventure, or get things done. Your home away from
+          home, set on the vast waters of the Pacific Ocean. Relax, adventure,
+          or get things done.Y our home away from home, set on the vast waters
+          of the Pacific Ocean. Relax, adventure, or get things done. Your
+          home away from home, set on the vast waters of the Pacific Ocean.
+          Relax, adventure, or get things done. Your home away from home, set
+          on the vast waters of the Pacific Ocean. Relax, adventure, or get
+          things done. Your home away from home, set on the vast waters of the
+          Pacific Ocean. Relax, adventure, or get things done.
+        </p>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <a id="check-availability-button" href="#!" class="btn btn-success">
+            Check Availability
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+{{end}}
+
+
+{{define "js"}}
+  <script>
+    document.getElementById("check-availability-button").addEventListener("click", () => {
+      // notify("success", "This is a success message!")
+      // notifyModal("Oops...", "<em>Wrong!</em>", "error", "Clown")
+
+      // attention.toast({title: "Hello toast!"})
+      // attention.success({ title: "Booked", text: "Booking was successful!" })
+      let html = `
+        <form action="reservation.html" method="get" class="needs-validation" novalidate>
+          <div class="row" id="reservation-dates">
+            <div class="col">
+              <input type="text" id="start" name="start" class="form-control" required placeholder="Arrival Date">
+            </div>
+            <div class="col">
+              <input type="text" id="end" name="end" class="form-control" required placeholder="Departure Date">
+            </div>
+          </div>
+          <div class="row space"></div>
+        </form>
+      `;
+
+      attention.custom({ title: "Search for Availability", html })
+    })
+  </script>
+{{end}}
